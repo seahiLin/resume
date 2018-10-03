@@ -1,0 +1,54 @@
+@import '../../assets/styles/variables.less';
+.introduction {
+  background: radial-gradient(ellipse farthest-corner, #FFFFFF, #EEEEEE);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .avatar {
+    width:190px;
+    height: 190px;
+    overflow: hidden;
+    margin-top: -60px;
+
+    border-radius: 50%;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      user-select: none;
+    }
+  }
+
+  .name {
+    font-size: 40px;
+    line-height: 36px;
+    margin-top: 36px;
+  }
+
+  .description {
+    color: @gray-dark-color;
+    line-height: 80px;
+    font-size: 20px;
+  }
+
+  .information {
+    max-width: 450px;
+
+    span {
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      line-height: 35px;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
