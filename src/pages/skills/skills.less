@@ -1,0 +1,60 @@
+.skills {
+  display: flex;
+  background: linear-gradient(to left, #FF5F6D , #FFC371);
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+
+      .card {
+        width: 260px;
+        height: 260px;
+        // margin: 40px 20px;
+        border-radius: 50%;
+        margin: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          position: absolute;
+          backface-visibility: hidden;
+          transition: all 1s ease-in-out;
+        }
+
+        .details {
+          position: absolute;
+          width: 68%;
+          height: 68%;
+          word-break: break-all;
+          transform: rotateY(180deg);
+          backface-visibility: hidden;
+          transition: all 1s ease-in-out;
+          text-align: center;
+
+          p {
+            vertical-align: middle;
+          }
+        }
+
+        &:hover {
+          img {
+            transform: rotateY(180deg);
+          }
+          .details {
+            transform: rotateX(360deg);
+          }
+        }
+      }
+    }
+  }
+}

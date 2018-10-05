@@ -27,3 +27,19 @@ body {
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.3)
   }
 }
+
+footer {
+  animation: flash 2s ease-in-out infinite;
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
