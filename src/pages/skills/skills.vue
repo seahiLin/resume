@@ -9,7 +9,9 @@
           <div class="card">
             <img src="../../assets/icons/h5.svg" alt="h5">
             <div class="details">
-              <p>H5</p>
+              <p>· 了解html渲染解析知识</p>
+              <p>· 熟悉html布局,了解响应式布局</p>
+              <p>· 对于语义化标签有一定认识</p>
             </div>
           </div>
         </circleProgress>
@@ -19,7 +21,8 @@
           <div class="card">
             <img src="../../assets/icons/css3.svg" alt="css3">
             <div class="details">
-              <p>CSS3</p>
+              <p>·对于css盒模型与BFC有一定理解</p>
+              <p>·熟悉css3动画</p>
             </div>
           </div>
         </circleProgress>
@@ -59,7 +62,9 @@
           <div class="card">
             <img src="../../assets/icons/http.svg" alt="http">
             <div class="details">
-              <p>HTTP</p>
+              <p>· 熟悉常见http状态码</p>
+              <p>· 了解不同请求类型的区别</p>
+              <p>· </p>
             </div>
           </div>
         </circleProgress>

@@ -12,6 +12,9 @@
       <span><img src="../../assets/icons/电话.svg" alt="电话" class="icon">156 3794 2652</span>
       <span><img src="../../assets/icons/邮箱.svg" alt="邮箱" class="icon">22968 09118@qq.com</span>
     </div>
+    <footer>
+      <img src="../../assets/icons/箭头3.svg" alt="下拉">
+    </footer>
   </div>
 </template>
 

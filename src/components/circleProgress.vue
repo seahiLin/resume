@@ -123,19 +123,16 @@ export default {
       top: 0;
       box-sizing: content-box;
       transform: rotate(-45deg);
+      transition: all 1s linear;
     }
-  }
-
-  .animation {
-
   }
 
   .left {
     left: 0;
 
     .leftcircle {
-      border-top: 10px solid green;
-      border-left: 10px solid green;
+      border-top: 10px solid #baf8ba;
+      border-left: 10px solid #baf8ba;
       left: 0;
       // transform: rotate(-225deg);
       animation-name: circleProgress_left_0;
@@ -190,8 +187,8 @@ export default {
     }
 
     .rightcircle {
-      border-bottom: 10px solid green;
-      border-right: 10px solid green;
+      border-bottom: 10px solid #baf8ba;
+      border-right: 10px solid #baf8ba;
       right: 0;
       // transform: rotate(-225deg);
       // animation: circleProgress_right_0 1s linear;
@@ -232,6 +229,24 @@ export default {
         100% {
           transform: rotate(-225deg);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .circle-progress {
+    width: 140px;
+    height: 140px;
+    margin: 0 10px 10px 10px;
+
+    .wrapper {
+      width: 70px;
+      height: 140px;
+
+      .circle {
+        width: 120px;
+        height: 120px;
       }
     }
   }

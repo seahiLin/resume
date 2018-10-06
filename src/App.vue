@@ -14,6 +14,13 @@
         nextPage: currentPage < 1
       }"
     />
+    <projects
+      :class="{
+        currentPage: currentPage === 2,
+        prePage: currentPage > 2,
+        nextPage: currentPage < 2
+      }"
+    />
   </div>
 </template>
 
@@ -21,6 +28,7 @@
 
 import introduction from './pages/introduction/introduction';
 import skills from './pages/skills/skills';
+import projects from './pages/projects/projects';
 
 export default {
   name: 'App',
@@ -35,6 +43,10 @@ export default {
         {
           pageIndex: 1,
           name: 'skills'
+        },
+        {
+          pageIndex: 1,
+          name: 'projects'
         }
       ]
     }
@@ -69,7 +81,8 @@ export default {
   },
   components: {
     introduction,
-    skills
+    skills,
+    projects
   }
 }
 </script>
