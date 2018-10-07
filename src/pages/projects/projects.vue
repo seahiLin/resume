@@ -1,13 +1,14 @@
 <template>
   <div class="page projects">
-    <h1 class="title">项目经历</h1>
+    <h3 class="title">项目经历</h3>
     <div class="project-container">
       <div class="project-item">
         <h4 class="title">个人主页</h4>
         <img src="../../assets/images/resume.png" alt="resume">
         <article>
-          <p>个人主页简历网站（网站未完成备案，暂时不能通用域名访问）</p>
-          <p>大量运用css3的知识对于内容增加了动画效果，主要使用flex做布局上的处理。
+          <p>个人主页简历网站（网站未完成备案，暂时不能通过域名访问）</p>
+          <p>项目选型是vue+webpack，服务端采用阿里云服务器和nginx Web服务器。
+            大量运用css3的知识对于主体内容添加了动画效果，主要使用flex做布局上的处理。
             并运用媒体查询做了响应式处理，对移动端做了适配。
           </p>
         </article>

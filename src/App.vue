@@ -1,5 +1,6 @@
 <template>
-  <div class="app">
+  <div class="app" @touchmove="touchmove" @touchend="touchend">
+    <navigator :page="currentPage" @linkTo="linkTo" />
     <introduction
       :class="{
         currentPage: currentPage === 0,
@@ -26,6 +27,7 @@
 
 <script>
 
+import navigator from './components/navigator';
 import introduction from './pages/introduction/introduction';
 import skills from './pages/skills/skills';
 import projects from './pages/projects/projects';
@@ -49,6 +51,47 @@ export default {
           name: 'projects'
         }
       ]
+    }
+  },
+  methods: {
+    linkTo(page) {
+      this.currentPage = page;
+    },
+    touchmove (e) {
+      e.preventDefault()
+      if (this.touchStartX !== 0) return
+      this.touchStartX = e.changedTouches[0].screenY
+    },
+    touchend (e) {
+      e.preventDefault()
+
+      if (this.touchStartX === 0) return
+
+      const touchEndX = e.changedTouches[0].screenY
+
+      if (this.scrollingLock) return
+
+      if (this.touchStartX - touchEndX > 80) {
+        this.scrollingLock = true
+
+        setTimeout(() => {
+          this.scrollingLock = false
+        }, 700)
+
+        if (this.currentPage === this.routes.length - 1) return
+        else this.currentPage++
+      } else if (this.touchStartX - touchEndX < -80) {
+        this.scrollingLock = true
+
+        setTimeout(() => {
+          this.scrollingLock = false
+        }, 700)
+
+        if (this.currentPage === 0) return
+        else this.currentPage--
+      }
+
+      this.touchStartX = 0
     }
   },
   mounted() {
@@ -82,7 +125,8 @@ export default {
   components: {
     introduction,
     skills,
-    projects
+    projects,
+    navigator
   }
 }
 </script>
