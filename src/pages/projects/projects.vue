@@ -3,7 +3,7 @@
     <h3 class="title">项目经历</h3>
     <div class="project-container">
       <div class="project-item">
-        <h4 class="title">个人主页</h4>
+        <h5 class="title">个人主页</h5>
         <img src="../../assets/images/resume.png" alt="resume">
         <article>
           <p>个人主页简历网站（网站未完成备案，暂时不能通过域名访问）</p>
@@ -19,7 +19,7 @@
         </button>
       </div>
       <div class="project-item">
-        <h4 class="title">知乎日报</h4>
+        <h5 class="title">知乎日报</h5>
         <img src="../../assets/images/知乎日报.png" alt="知乎日报">
         <article>
           <p>知乎日报是由知乎开发的一款精选文章，资讯阅读类App。</p>

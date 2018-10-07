@@ -56,8 +56,9 @@
   .projects {
   
     h3.title {
-      font-size: 40px;
+      font-size: 30px;
       margin-bottom: 0px;
+      line-height: 40px;
     }
   
     .project-container {
@@ -65,16 +66,21 @@
       display: block;
       position: relative;
       height: 470px;
-  
+
+
       .project-item {
         position: absolute;
         width: 100%;
+
+        &:first-of-type{
+          display: none;
+        }
   
         .title {
           margin: 0;
         }
 
-        h4.title {
+        h5.title {
           line-height: 40px;
         }
   
