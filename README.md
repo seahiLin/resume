@@ -1,6 +1,6 @@
 # resume
 
-> A Vue.js project
+> preview： https://seahilin.github.io/resume/
 
 ## Build Setup
 
