@@ -103,21 +103,21 @@ export default {
 
 <style lang="less">
 .circle-progress {
-  width: 280px;
-  height: 280px;
+  width: 2.8rem;
+  height: 2.8rem;
   position: relative;
-  margin: 25px 70px;
+  margin: 0.25rem 0.7rem;
 
   .wrapper {
-    width: 140px;
-    height: 280px;
+    width: 1.4rem;
+    height: 2.8rem;
     position: absolute;
     overflow: hidden;
 
     .circle {
-      width: 260px;
-      height: 260px;
-      border: 10px solid transparent;
+      width: 2.6rem;
+      height: 2.6rem;
+      border: 0.1rem solid transparent;
       border-radius: 50%;
       position: absolute;
       top: 0;
@@ -131,8 +131,8 @@ export default {
     left: 0;
 
     .leftcircle {
-      border-top: 10px solid #baf8ba;
-      border-left: 10px solid #baf8ba;
+      border-top: 0.1rem solid #baf8ba;
+      border-left: 0.1rem solid #baf8ba;
       left: 0;
       // transform: rotate(-225deg);
       animation-name: circleProgress_left_0;
@@ -187,8 +187,8 @@ export default {
     }
 
     .rightcircle {
-      border-bottom: 10px solid #baf8ba;
-      border-right: 10px solid #baf8ba;
+      border-bottom: 0.1rem solid #baf8ba;
+      border-right: 0.1rem solid #baf8ba;
       right: 0;
       // transform: rotate(-225deg);
       // animation: circleProgress_right_0 1s linear;
@@ -236,17 +236,17 @@ export default {
 
 @media (max-width: 430px) {
   .circle-progress {
-    width: 140px;
-    height: 140px;
-    margin: 0 10px 10px 10px;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 0;
 
     .wrapper {
-      width: 70px;
-      height: 140px;
+      width: 1.2rem;
+      height: 2.4rem;
 
       .circle {
-        width: 120px;
-        height: 120px;
+        width: 2.2rem;
+        height: 2.2rem;
       }
     }
   }

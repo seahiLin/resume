@@ -16,11 +16,11 @@
       width: 80%;
 
       .card {
-        width: 260px;
-        height: 260px;
+        width: 2.6rem;
+        height: 2.6rem;
         // margin: 40px 20px;
         border-radius: 50%;
-        margin: 10px;
+        margin: 0.1rem;
 
         display: flex;
         justify-content: center;
@@ -51,7 +51,7 @@
             vertical-align: middle;
             width: 100%;
             text-align: left;
-            font-size: 18px;
+            font-size: 0.18rem;
           }
 
           span {
@@ -71,20 +71,25 @@
     }
   }
 }
-
+@media (min-width: 750px) and (max-width: 1025px) {
+  .skills {
+    .main {
+      .container {
+        width: 90%;
+      }
+    }
+  }
+}
 @media (max-width: 430px) {
   .skills {
-    .title {
-      font-size: 35px;
-      line-height: 40px;
-    }
+
     .main {
       .container {
         width: 100%;
 
         .card {
-          width: 120px;
-          height: 120px;
+          width: 2.2rem;
+          height: 2.2rem;
 
           .details {
             p {
@@ -93,6 +98,7 @@
 
             span {
               display: block;
+              font-size: 0.3rem;
             }
           }
 

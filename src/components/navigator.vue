@@ -40,21 +40,21 @@ export default {
 
 <style lang="less">
 .nav-container {
-  width: 50px;
+  width: 0.5rem;
   position: absolute;
-  right: 50px;
+  right: 0.5rem;
   top: 50%;
-  margin-top: -120px;
+  margin-top: -1.2rem;
   z-index: 10;
 
   button {
-    width: 50px;
-    height: 50px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: transparent;
     overflow: hidden;
     border-radius: 50%;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 0.3rem;
     cursor: pointer;
 
     .active-link {
