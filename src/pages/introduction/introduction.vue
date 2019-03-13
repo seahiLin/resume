@@ -3,7 +3,7 @@
     <div class="avatar">
       <img src="../../assets/images/IMG_1306.jpg" alt="">
     </div>
-    <h1 class="name">林喜海</h1>
+    <h1 class="name">{{$t("introduction.name")}}</h1>
     <p class="description">初步掌握面向搜索引擎编程</p>
     <div class="information">
       <span><img src="../../assets/icons/生日.svg" alt="生日" class="icon"> 1997.07</span>
