@@ -1,5 +1,6 @@
 <template>
-  <div class="app" @touchmove="touchmove" @touchend="touchend">
+  <div class="app" ref="app" @touchmove="touchmove" @touchend="touchend">
+    <languageSwitcher />
     <navigator :page="currentPage" @linkTo="linkTo" />
     <introduction
       :class="{
@@ -27,6 +28,7 @@
 
 <script>
 
+import languageSwitcher from './components/languageSwitcher';
 import navigator from './components/navigator';
 import introduction from './pages/introduction/introduction';
 import skills from './pages/skills/skills';
@@ -58,46 +60,46 @@ export default {
       this.currentPage = page;
     },
     touchmove (e) {
-      e.preventDefault()
-      if (this.touchStartX !== 0) return
-      this.touchStartX = e.changedTouches[0].screenY
+      e.preventDefault();
+      if (this.touchStartX !== 0) return;
+      this.touchStartX = e.changedTouches[0].screenY;
     },
     touchend (e) {
-      e.preventDefault()
+      e.preventDefault();
 
-      if (this.touchStartX === 0) return
+      if (this.touchStartX === 0) return;
 
-      const touchEndX = e.changedTouches[0].screenY
+      const touchEndX = e.changedTouches[0].screenY;
 
-      if (this.scrollingLock) return
+      if (this.scrollingLock) return;
 
       if (this.touchStartX - touchEndX > 80) {
-        this.scrollingLock = true
+        this.scrollingLock = true;
 
         setTimeout(() => {
-          this.scrollingLock = false
+          this.scrollingLock = false;
         }, 700)
 
-        if (this.currentPage === this.routes.length - 1) return
-        else this.currentPage++
+        if (this.currentPage === this.routes.length - 1) return;
+        else this.currentPage++;
       } else if (this.touchStartX - touchEndX < -80) {
-        this.scrollingLock = true
+        this.scrollingLock = true;
 
         setTimeout(() => {
-          this.scrollingLock = false
+          this.scrollingLock = false;
         }, 700)
 
-        if (this.currentPage === 0) return
-        else this.currentPage--
+        if (this.currentPage === 0) return;
+        else this.currentPage--;
       }
 
-      this.touchStartX = 0
+      this.touchStartX = 0;
     }
   },
   mounted() {
     // stop default scrolling event
     // add customized scrolling event
-    window.onmousewheel = (e) => {
+    this.$refs.app.onmousewheel = (e) => {
       e.stopPropagation();
       e.preventDefault();
 
@@ -126,7 +128,8 @@ export default {
     introduction,
     skills,
     projects,
-    navigator
+    navigator,
+    languageSwitcher
   }
 }
 </script>
@@ -135,5 +138,6 @@ export default {
 @import './assets/styles/common.less';
 @import './assets/styles/reset.less';
 @import './assets/styles/app.less';
+@import './assets/iconfonts/iconfont.css';
 </style>
 
