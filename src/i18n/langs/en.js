@@ -1,6 +1,6 @@
 const en = {
   introduction: {
-    name: 'seahi'
+    name: 'Seahi'
   }
 }
 
