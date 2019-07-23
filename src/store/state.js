@@ -66,7 +66,7 @@ const state = {
   summary: [
     {
       name: '技术栈',
-      path: '/technologyStack'
+      path: '/resume/technologyStack'
     },
     {
       name: '未完待续',
