@@ -1,18 +1,25 @@
 <template>
-  <div class="languageSwitcher" @click="changeLanguage">
-    <img class="langCN" src="../assets/icons/中文符号.png" alt="中文">
-    <img class="langEN" src="../assets/icons/英文符号.png" alt="English">
+  <div class="languageSwitcher"
+    @click="changeLanguage">
+    <img class="langCN" src="../assets/icons/中文符号.png" alt="中文"
+      :class="lang === 'cn' ? 'on' : 'off'">
+    <img class="langEN" src="../assets/icons/英文符号.png" alt="English"
+      :class="lang === 'en' ? 'on' : 'off'">
   </div>
 </template>
 
 <script>
 export default {
   name: "languageSwitcher",
+  data () {
+    return {
+      lang: window.localStorage.lang
+    }
+  },
   methods: {
     changeLanguage() {
-      let lang = window.localStorage.lang || 'cn';
-      window.localStorage.lang = (lang === 'cn') ? 'en' : 'cn';
-      this.$i18n.locale = window.localStorage.lang;
+      window.localStorage.lang = (this.lang === 'cn') ? 'en' : 'cn';
+      this.$i18n.locale = this.lang = window.localStorage.lang;
     }
   }
 }
@@ -31,14 +38,15 @@ export default {
     width: 100%;
     height: 100%;
     position: absolute;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
 
-    &.langCN {
-      backface-visibility: hidden;
+    &.on {
+      transform: rotateY(0);
     }
 
-    &.langEN {
-      backface-visibility: hidden;
-      transform: rotateY(180deg);
+    &.off {
+      transform: rotateY(180deg)
     }
   }
 }

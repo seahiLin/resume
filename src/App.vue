@@ -16,7 +16,7 @@
         nextPage: currentPage < 1
       }"
     />
-    <projects
+    <personalSummary
       :class="{
         currentPage: currentPage === 2,
         prePage: currentPage > 2,
@@ -32,27 +32,13 @@ import languageSwitcher from './components/languageSwitcher';
 import navigator from './components/navigator';
 import introduction from './pages/introduction/introduction';
 import skills from './pages/skills/skills';
-import projects from './pages/projects/projects';
+import personalSummary from './pages/personalSummary/personalSummary';
 
 export default {
   name: 'App',
   data() {
     return {
-      currentPage: 0,
-      routes: [
-        {
-          pageIndex: 0,
-          name: 'introduction'
-        },
-        {
-          pageIndex: 1,
-          name: 'skills'
-        },
-        {
-          pageIndex: 1,
-          name: 'projects'
-        }
-      ]
+      currentPage: 0
     }
   },
   methods: {
@@ -80,7 +66,7 @@ export default {
           this.scrollingLock = false;
         }, 700)
 
-        if (this.currentPage === this.routes.length - 1) return;
+        if (this.currentPage === 2) return;
         else this.currentPage++;
       } else if (this.touchStartX - touchEndX < -80) {
         this.scrollingLock = true;
@@ -111,7 +97,7 @@ export default {
           this.scrollLock = false;
         }, 500)
 
-        if(this.currentPage === this.routes.length - 1) return;
+        if(this.currentPage === 2) return;
         this.currentPage++;
       }else if (e.wheelDelta > 0) {
         this.scrollLock = true;
@@ -127,7 +113,7 @@ export default {
   components: {
     introduction,
     skills,
-    projects,
+    personalSummary,
     navigator,
     languageSwitcher
   }

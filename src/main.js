@@ -1,30 +1,16 @@
-import Vue from 'vue'
-import App from './App'
-//import VueI18n from 'vue-i18n';
-import i18n from './i18n/i18n'
+import Vue from 'vue';
+import App from './App';
+import i18n from './i18n/i18n';
+import store from './store/index';
+import router from './router/index';
 
-Vue.config.productionTip = false
-//Vue.use(VueI18n)
+Vue.config.productionTip = false;
 
-/*const i18n = new VueI18n({
-  locale: 'cn',
-  messages: {
-    cn: {
-      introduction: {
-        name: '林喜海'
-      }
-    },
-    en: {
-      introduction: {
-        name: 'seahi'
-      }
-    }
-  }
-})
-*/
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   i18n,
+  store,
+  router,
   render: h => h(App)
 })
