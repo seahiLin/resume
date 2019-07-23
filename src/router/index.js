@@ -12,7 +12,11 @@ const router = new Router({
       component: technologyStack
     },
     {
-      path: '/technologyStack',
+      path: '/resume',
+      component: technologyStack
+    },
+    {
+      path: '/resume/technologyStack',
       component: technologyStack
     }
   ]
