@@ -1,6 +1,6 @@
 <template>
   <div class="page personal-summary">
-    <h3 class="title">总结</h3>
+    <h3 class="title">{{$t('personalSummary.title')}}</h3>
     <div class="main">
       <div class="summary-items-container">
         <div class="summary-item"

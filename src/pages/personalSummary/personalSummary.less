@@ -21,6 +21,7 @@
       .summary-item {
         height: 0.5rem;
         background-color: #d2d2d2;
+        border-bottom: 1px solid #bababa;
 
         a {
           display: flex;
@@ -29,7 +30,7 @@
           width: 100%;
           height: 100%;
           text-decoration: none;
-          color: black;
+          color: #6a7c8e;
         }
       }
     }
@@ -42,51 +43,23 @@
 }
 
 @media (max-width: 430px) {
-  .projects {
-  
-    .project-container {
-      overflow: hidden;
-      display: block;
-      position: relative;
-      height: 400px;
+  .personal-summary {
 
+    .main {
+      flex-direction: column;
 
-      .project-item {
-        position: absolute;
+      .summary-items-container {
         width: 100%;
+        height: 10%;
 
-        &:first-of-type{
-          display: none;
+        .summary-item {
+          height: 100%;
         }
-  
-        .title {
-          margin: 0;
-        }
+      }
 
-        h5.title {
-          line-height: 0.4rem;
-        }
-  
-        article {
-          font-size: 0.2rem;
-  
-          p {
-            text-indent: 2em;
-            font-size: 0.2rem;
-          }
-        }
-  
-        button {
-          width: 0.45rem;
-          height: 0.45rem;
-          display: block;
-          margin: 0.1rem auto;
-          position: unset;
-        }
-  
-        img {
-          width: 100%;
-        }
+      .view-container {
+        width: 100%;
+        height: 90%;
       }
     }
   }

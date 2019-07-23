@@ -67,6 +67,10 @@ const state = {
     {
       name: '技术栈',
       path: '/technologyStack'
+    },
+    {
+      name: '未完待续',
+      path: '/'
     }
   ]
 };

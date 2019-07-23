@@ -1,6 +1,6 @@
 <template>
   <div class="page skills">
-    <h1 class="title">技能</h1>
+    <h1 class="title">{{$t('skills.title')}}</h1>
     <div class="main">
       <div class="container" ref="container">
         <circleProgress
@@ -20,7 +20,7 @@
         </circleProgress>
       </div>
     </div>
-    <footer>hover</footer>
+    <footer>{{$t('skills.footer')}}</footer>
   </div>
 </template>
 
