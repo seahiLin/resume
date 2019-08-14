@@ -1,6 +1,7 @@
 <template>
   <div class="languageSwitcher"
-    @click="changeLanguage">
+    @click="changeLanguage"
+    @touchend="changeLanguage">
     <img class="langCN" src="../assets/icons/中文符号.png" alt="中文"
       :class="lang === 'cn' ? 'on' : 'off'">
     <img class="langEN" src="../assets/icons/英文符号.png" alt="English"
