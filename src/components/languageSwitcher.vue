@@ -13,7 +13,7 @@ export default {
   name: "languageSwitcher",
   data () {
     return {
-      lang: window.localStorage.lang
+      lang: window.localStorage.lang || 'cn'
     }
   },
   methods: {

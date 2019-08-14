@@ -13,7 +13,7 @@
 let echarts = require('echarts');
 
 export default {
-  name: 'technologyStack',
+  name: 'selfEvaluation',
   data () {
     return {
       myChart: {},
@@ -21,7 +21,7 @@ export default {
         baseOption: {
           backgroundColor: 'rgba(204,204,204,0.7 )',
           title: {
-            text: '掌握程度',
+            text: '个人素质',
             top: '5%',
             left: 'center',
             textStyle: {
@@ -65,23 +65,23 @@ export default {
               },
               indicator: [
                 {
-                name: 'HTML&CSS',
+                name: '责任心',
                 max: 100,
                 }, 
                 {
-                  name: 'JS',
+                  name: '心理调节',
                   max: 100
                 }, 
                 {
-                  name: 'VUE+Vue-Router+Vuex',
+                  name: '沟通能力',
                   max: 100
                 }, 
                 {
-                  name: 'HTTP/Git/Webpack',
+                  name: '实践经验',
                   max: 100
                 }, 
                 {
-                  name: '英语',
+                  name: '学习能力',
                   max: 100
                 }
               ]
@@ -108,7 +108,7 @@ export default {
               data: [
                 {
                   name: 'mastery',
-                  value: [70, 70, 60, 50, 70],
+                  value: [75, 75, 65, 65, 80],
                   symbol: 'circle',
                   symbolSize: 5,
                   label: {
@@ -164,29 +164,7 @@ export default {
                       fontSize: 12
                     }
                   },
-                  nameGap: 10,
-                  indicator: [
-                    {
-                    name: 'HTML&CSS',
-                    max: 100,
-                    }, 
-                    {
-                      name: 'JS',
-                      max: 100
-                    }, 
-                    {
-                      name: 'VUE',
-                      max: 100
-                    }, 
-                    {
-                      name: 'HTTP/Git',
-                      max: 100
-                    }, 
-                    {
-                      name: '英语',
-                      max: 100
-                    }
-                  ]
+                  nameGap: 3
                 }
               ],
               series: [
@@ -197,7 +175,43 @@ export default {
                         width: 2
                       }
                     }
-                  }
+                  },
+                  data: [
+                    {
+                      name: 'mastery',
+                      value: [75, 75, 65, 65, 80],
+                      symbol: 'circle',
+                      symbolSize: 2,
+                      label: {
+                        normal: {
+                          show: true,
+                          position: 'top',
+                          distance: 2,
+                          color: 'rgba(255,0,0,1)',
+                          fontSize: 10,
+                          formatter:function(params) {
+                            return params.value;
+                          }
+                        }  
+                      },
+                      itemStyle: {
+                        normal: {
+                          borderColor: 'rgba(255,0,0,1)',
+                          borderWidth: 1,
+                        }
+                      },
+                      lineStyle: {
+                        normal: {
+                          opacity: 0.5
+                        }
+                      },
+                      areaStyle: {
+                        normal: {
+                          color: 'rgba(255,0,0,0.6)'
+                        }
+                      }
+                    }
+                  ]
                 }
               ]
             }
