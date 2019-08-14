@@ -65,8 +65,8 @@ const state = {
   ],
   summary: [
     {
-      name: '技术栈',
-      path: '/resume/technologyStack'
+      name: '自我评价',
+      path: '/resume/selfEvaluation'
     },
     {
       name: '未完待续',

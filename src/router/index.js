@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import technologyStack from '@/components/technologyStack';
+import selfEvaluation from '@/components/selfEvaluation';
 
 Vue.use(Router);
 
@@ -9,15 +9,15 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: technologyStack
+      component: selfEvaluation
     },
     {
       path: '/resume',
-      component: technologyStack
+      component: selfEvaluation
     },
     {
-      path: '/resume/technologyStack',
-      component: technologyStack
+      path: '/resume/selfEvaluation',
+      component: selfEvaluation
     }
   ]
 });
